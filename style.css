@@ -1,10 +1,10 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --text-color: white;
   --bg-url: url(./assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
@@ -14,7 +14,7 @@
   --switch-bg-url: url(/assets/MoonStars.svg);
 }
 
-.light{
+.light {
   --text-color: black;
   --bg-url: url(./assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
@@ -24,45 +24,46 @@
   --switch-bg-url: url(/assets/Sun.svg);
 }
 
-body{
+body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
-body *{
-  font-family: 'Inter', sans-serif;
+body * {
+  font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
 
-#container{
+#container {
   width: 100%;
   max-width: 588px;
   margin: 56px auto 0px;
   padding: 0 24px;
 }
 
-#profile{
+#profile {
   text-align: center;
   padding: 24px;
 }
 
-#profile img{
+#profile img {
   width: 112px;
 }
 
-#profile p{
+#profile p {
   font-weight: 500;
   line-height: 24px;
   margin-top: 8px;
 }
 
-#switch{
+#switch {
   position: relative;
   width: 64px;
 
   margin: 4px auto;
 }
 
-#switch button{
+#switch button {
   width: 32px;
   height: 32px;
   background: white var(--switch-bg-url) no-repeat center;
@@ -81,7 +82,7 @@ body *{
   left: initial;
 }
 
-#switch span{
+#switch span {
   display: block;
   width: 64px;
   height: 24px;
@@ -93,7 +94,7 @@ body *{
   border-radius: 9999px;
 }
 
-ul{
+ul {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -102,8 +103,7 @@ ul{
   padding: 24px 0;
 }
 
-ul li a{
-
+ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,15 +121,14 @@ ul li a{
   font-weight: 500;
 
   transition: background 0.3s;
-
 }
 
-ul li a:hover{
-    background: var(--surfacer-color-hover);
+ul li a:hover {
+  background: var(--surfacer-color-hover);
   border: 1.5px solid var(--text-color);
 }
 
-#social-links{
+#social-links {
   display: flex;
   justify-content: center;
 
@@ -138,7 +137,7 @@ ul li a:hover{
   font-size: 24px;
 }
 
-#social-links a{
+#social-links a {
   align-items: center;
   justify-content: center;
   padding: 16px;
@@ -147,11 +146,21 @@ ul li a:hover{
   border-radius: 50%;
 }
 
-#social-links a:hover{
+#social-links a:hover {
   background: var(--highlight-color);
 }
 
-footer{
+footer {
   padding: 24px 0;
   text-align: center;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
